@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo Prodotti - Mary Jane Club</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        :root {
+            --background-color: #000000;
+            --card-background-color: #1e1e1e;
+            --button-color: #A5FF90;
+            --button-hover-color: #76FF03;
+            --text-color: #FFFFFF;
+            --fade-in-animation: fadeIn 2s;
+        }
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header, nav, main, footer {
+            padding: 20px 0;
+            text-align: center;
+        }
+        #logo {
+            max-width: 100px; /* Controlla la larghezza massima del logo */
+            height: auto; /* Mantiene le proporzioni del logo */
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .nav-button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            transition: transform 0.2s ease, color 0.3s;
+        }
+        .nav-button i {
+            color: var(--button-color);
+            font-size: 2em;
+        }
+        .nav-button:hover i {
+            color: var(--button-hover-color);
+            transform: scale(1.1);
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-card {
+            background-color: var(--card-background-color);
+            border-radius: 10px;
+            overflow: hidden;
+            width: calc(33.333% - 20px);
+            transition: transform 0.3s ease;
+            animation: var(--fade-in-animation);
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 15px;
+            text-align: center;
+        }
+        .product-name {
+            font-size: 1.2em;
+        }
+        .product-description {
+            font-size: 0.9em;
+            color: #aaa;
+        }
+        footer {
+            margin-top: auto;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img id="logo" src="logoblack.png" alt="Mary Jane Club Logo">
+    </header>
+
+    <nav>
+        <button class="nav-button" onclick="location.href='index.html'"><i class="fas fa-home"></i></button>
+        <button class="nav-button" onclick="location.href='catalogo.html'"><i class="fas fa-cannabis"></i></button>
+        <button class="nav-button" onclick="location.href='offerte.html'"><i class="fas fa-tags"></i></button>
+        <button class="nav-button" onclick="location.href='chisiamo.html'"><i class="fas fa-users"></i></button>
+    </nav>
+
+    <main>
+        <!-- Esempio di card prodotto -->
+        <div class="product-card">
+            <img src="product1.jpg" alt="Prodotto 1" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Gorilla Glue</div>
+                <div class="product-description">La Gorilla Glue è una varietà ibrida ottenuta da un incrocio genetico tra Chem's Sister, Sour Dubb e Chocolate Diesel. Questa varietà è per il 37% sativa e per il 63% indica. La "Gorilla Glue", conosciuta anche come "Original Glue" o "GG4", è una varietà potente che offre euforia e rilassamento pesanti, lasciandoti "incollato" al divano.</div>
+            </div>
+        </div>
+        <div class="product-card">
+            <img src="product2.jpg" alt="Garlic" class="product-image">
+            <div class="product-info">
+                <div class="product-name">Garlic</div>
+                <div class="product-description">Garlic Bud è una classica varietà indica degli anni '90, ibridata da The Seed Bank (ora nota come Sensi Seeds) utilizzando genetiche afgane. Il suo nome è solo vagamente legato all'aroma di Garlic Bud, che ha un odore molto più simile al muschio piccante e alle spezie.</div>
+            </div>
+        </div>
+        <!-- Ripetere il blocco sopra per ogni prodotto nel catalogo -->
+        <!-- Esempi aggiuntivi di card prodotto qui -->
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mary Jane Club</
+
+    </footer>
+</body>
+</html>
