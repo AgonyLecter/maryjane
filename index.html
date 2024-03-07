@@ -14,7 +14,6 @@
             --text-color: #FFFFFF;
             --fade-in-animation: fadeIn 2s;
             --highlight-animation: highlightText 5s infinite alternate;
-            --zoom-in-animation: zoomIn 0.5s ease-out;
         }
         body {
             font-family: 'Orbitron', sans-serif;
@@ -27,25 +26,25 @@
             min-height: 100vh;
         }
         header {
-            padding: 10px 0; /* Ridotto il padding */
+            padding: 10px 0;
             text-align: center;
         }
         #logo {
-            max-width: 80px; /* Ridimensionato il logo */
+            max-width: 80px;
             height: auto;
         }
         nav {
             display: flex;
             justify-content: center;
-            gap: 10px; /* Ridotto lo spazio tra i bottoni */
-            padding: 10px 0; /* Ridotto il padding */
+            gap: 10px;
+            padding: 10px 0;
         }
         .nav-button {
             border: none;
             background-color: transparent;
             cursor: pointer;
             transition: transform 0.2s ease, color 0.3s;
-            font-size: 1.5em; /* Ridotte le dimensioni */
+            font-size: 1.5em;
         }
         .nav-button i {
             color: var(--button-color);
@@ -61,13 +60,12 @@
         }
         .welcome-message {
             margin-top: 20px;
-            text-align: center; /* Centrato il testo */
-        }
-        .fade-in {
+            text-align: center;
+            font-size: 1.5em;
             animation: var(--fade-in-animation);
         }
         #offerOfDay {
-            animation: var(--highlight-animation), var(--zoom-in-animation);
+            animation: var(--highlight-animation);
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -77,21 +75,21 @@
             from { color: var(--text-color); }
             to { color: var(--button-hover-color); }
         }
-        @keyframes zoomIn {
-            from { transform: scale(0); }
-            to { transform: scale(1); }
-        }
         footer {
             background-color: var(--background-color);
             color: var(--text-color);
             text-align: center;
-            padding: 0.5em 0; /* Ridotto il padding */
+            padding: 0.5em 0;
+        }
+        .ufo img {
+            width: 100px;
+            height: auto;
         }
     </style>
 </head>
 <body>
     <header>
-        <img id="logo" src="logoblack.png" alt="Mary Jane Club Logo" class="fade-in">
+        <img id="logo" src="logoblack.png" alt="Mary Jane Club Logo">
     </header>
 
     <nav>
@@ -102,22 +100,19 @@
     </nav>
 
     <main>
-        <section class="welcome-message fade-in">
+        <section class="welcome-message">
             <h2>Benvenuto al Mary Jane Club!</h2>
-            <p>Scopri con noi il Paradiso Verde a Tenerife.</p>
-            <div id="offerOfDay"></div>
+            <p>Scopri il fascino alieno della cannabis a Tenerife.</p>
+            <div id="offerOfDay">Non perdere l'offerta speciale di oggi: 20% di sconto sulla Gorilla Glue!</div>
         </section>
+        <div class="ufo">
+            <img src="ufo.gif" alt="UFO">
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Mary Jane Club by AgonyLecter</p>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var offer = "Non perdere l'offerta speciale di oggi: 20% di sconto sulla Gorilla Glue!";
-            document.getElementById('offerOfDay').innerText = offer;
-        });
-    </script>
 </body>
 </html>
+
