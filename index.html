@@ -27,28 +27,28 @@
             min-height: 100vh;
         }
         header {
-            padding: 20px 0;
+            padding: 10px 0; /* Ridotto il padding */
             text-align: center;
         }
         #logo {
-            max-width: 100px; /* Adjusted for consistency */
+            max-width: 80px; /* Ridimensionato il logo */
             height: auto;
         }
         nav {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            padding: 20px 0;
+            gap: 10px; /* Ridotto lo spazio tra i bottoni */
+            padding: 10px 0; /* Ridotto il padding */
         }
         .nav-button {
             border: none;
             background-color: transparent;
             cursor: pointer;
             transition: transform 0.2s ease, color 0.3s;
+            font-size: 1.5em; /* Ridotte le dimensioni */
         }
         .nav-button i {
             color: var(--button-color);
-            font-size: 2em;
         }
         .nav-button:hover i {
             color: var(--button-hover-color);
@@ -61,6 +61,7 @@
         }
         .welcome-message {
             margin-top: 20px;
+            text-align: center; /* Centrato il testo */
         }
         .fade-in {
             animation: var(--fade-in-animation);
@@ -84,7 +85,7 @@
             background-color: var(--background-color);
             color: var(--text-color);
             text-align: center;
-            padding: 1em 0;
+            padding: 0.5em 0; /* Ridotto il padding */
         }
     </style>
 </head>
@@ -114,7 +115,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var offer = "Non perdere l'offerta speciale di oggi: 20% di sconto su tutti i prodotti THC!";
+            var offer = "Non perdere l'offerta speciale di oggi: 20% di sconto sulla Gorilla Glue!";
             document.getElementById('offerOfDay').innerText = offer;
         });
     </script>
